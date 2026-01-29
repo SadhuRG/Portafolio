@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sadhú Rojas García - Portafolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #004f90;
+      --dark: #1a1a1a;
+      --light: #f8f9fa;
+      --gray: #6c757d;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: var(--light);
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 5rem 0 4rem;
+    }
+    header h1 { font-size: 3.2rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.3rem; opacity: 0.9; margin-bottom: 1.5rem; }
+    .social a {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0 12px;
+      transition: 0.3s;
+    }
+    .social a:hover { transform: translateY(-4px); }
+
+    section { padding: 4rem 0; }
+    h2 {
+      color: var(--primary);
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.8rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card h3 { color: var(--primary); margin-bottom: 0.8rem; }
+
+    .experience-item, .education-item {
+      margin-bottom: 2rem;
+    }
+    .experience-item h3, .education-item h3 {
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+    .date { color: var(--gray); font-style: italic; font-size: 0.95rem; }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 4rem 0 3rem; }
+      header h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Sadhú Rojas García</h1>
+      <p>Ingeniero Informático | Desarrollo Web & Visión Artificial</p>
+      <div class="social">
+        <a href="https://github.com/SadhuRG" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sadhu-rojas-qarcia-informatica613" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:sadhurojasgarcia@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+51958766689"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>Sobre mí</h2>
+      <p style="max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.1rem;">
+        Ingeniero Informático (UNT – Tercio Superior) especializado en <strong>desarrollo web con Laravel</strong> y <strong>visión artificial con YOLO / OpenCV</strong>.<br>
+        Experiencia en automatización, seguridad de redes (Cisco CCNA) y proyectos full-stack con metodologías ágiles.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" style="background:#fff;">
+    <div class="container">
+      <h2>Habilidades Principales</h2>
+      <div class="skills">
+        <div class="card"><h3>AI & Visión Artificial</h3><p>YOLOv8, OpenCV, TensorFlow, PyTorch, Scikit-learn</p></div>
+        <div class="card"><h3>Desarrollo Web</h3><p>Laravel (PHP), Livewire, Tailwind CSS, APIs REST</p></div>
+        <div class="card"><h3>Sistemas & DevOps</h3><p>Linux, Bash, Git/GitHub, SSH, Docker básico</p></div>
+        <div class="card"><h3>Redes & Seguridad</h3><p>Cisco CCNA, CyberOps, Firewall ASA, Pentesting</p></div>
+        <div class="card"><h3>Bases de Datos</h3><p>MySQL, SQL Server, MongoDB</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Proyectos Destacados</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>Sistema de Visión Artificial - Estacionamientos</h3>
+          <p>Detección de ocupación vehicular con YOLOv5 y dataset personalizado (CNRPark+EXT)</p>
+        </div>
+        <div class="card">
+          <h3>Plataforma SEDIPRO - Certificados + Asistencia IA</h3>
+          <p>Full-stack Laravel + Livewire + Tailwind • Asistencia con QR + OpenCV + Google Sheets</p>
+        </div>
+        <div class="card">
+          <h3>Modelo Predictivo Climático (Hackathon PhawAI)</h3>
+          <p>Entrenamiento y despliegue de modelo ML para datos climáticos en fase competitiva</p>
+        </div>
+        <div class="card">
+          <h3>Gestión de Horarios y Acreditación - FACEDU</h3>
+          <p>Sistema Laravel para automatización de procesos académicos y gestión documental</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" style="background:#f8f9fa;">
+    <div class="container">
+      <h2>Experiencia</h2>
+      <div class="experience-item">
+        <h3>PhawAI + TaReCDa – Becario Seleccionado</h3>
+        <p class="date">Julio – Noviembre 2025 | Trujillo, Perú</p>
+        <p>Entrenamiento y despliegue de modelos de detección/clasificación • Hackathon con modelo predictivo climático</p>
+      </div>
+      <div class="experience-item">
+        <h3>Comunidad SEDIPRO – Desarrollador Full Stack</h3>
+        <p class="date">Dic 2024 – Ene 2026 | Trujillo, Perú</p>
+        <p>Plataforma de certificados y asistencia con visión artificial (Python + OpenCV)</p>
+      </div>
+      <div class="experience-item">
+        <h3>FACEDU – Practicante Desarrollo y Gestión</h3>
+        <p class="date">Sep 2024 – Mar 2026 | Trujillo, Perú</p>
+        <p>Sistemas Laravel para acreditación, horarios y gestión de infraestructura de red</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <h2>Educación</h2>
+      <div class="education-item">
+        <h3>Universidad Nacional de Trujillo</h3>
+        <p>Bachiller en Ingeniería Informática – Tercio Superior (GPA 15.6/20)</p>
+        <p class="date">2020 – 2025 | Trujillo, Perú</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Sadhú Rojas García • Trujillo, Perú • <a href="mailto:sadhurojasgarcia@gmail.com" style="color:#4da6ff;">sadhurojasgarcia@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
